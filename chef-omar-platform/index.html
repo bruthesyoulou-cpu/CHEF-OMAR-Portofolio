@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#090a0f">
+<title>Chef Omar — Haute Gastronomie Afro-Fusion</title>
+<meta name="description" content="Haute gastronomie africaine et fusion moderne : menus 360°, réels, calendrier, réservation sur mesure et masterclasses.">
+<script>try{document.documentElement.dataset.theme=localStorage.co_theme||'noir'}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+[hidden]{display:none!important}
+:root,[data-theme=noir]{--bg:#090a0f;--sf:#11141c;--ln:rgba(255,255,255,.13);--tx:#F4F1EA;--mu:#9AA4B8;--gr:#10B981;--gt:#04130d;--am:#F5A524}
+[data-theme=nuit]{--bg:#0D1628;--sf:#131F35;--ln:rgba(255,255,255,.16);--tx:#fff;--mu:#A3B2CC;--gr:#10B981;--gt:#04130d;--am:#F5A524}
+[data-theme=ivoire]{--bg:#F7F4ED;--sf:#FFFFFF;--ln:rgba(27,27,27,.18);--tx:#1B1B1B;--mu:#5E5A50;--gr:#0B6B4D;--gt:#fff;--am:#8A5A00}
+:root{--hf:"Playfair Display",Georgia,serif;--bf:"Inter","Segoe UI",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}html{scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 var(--bf);overflow-x:hidden}
+h1,h2,h3{font-family:var(--hf);margin:0;line-height:1.1}p{margin:0}a{color:inherit}
+:focus-visible{outline:3px solid var(--am);outline-offset:3px;border-radius:8px}
+.w{width:min(1040px,100% - 32px);margin:0 auto}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--ln)}
+.top{display:flex;align-items:center;gap:12px;min-height:64px;flex-wrap:wrap;padding:8px 0}
+.lg{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1.15rem var(--hf)}
+.lg i{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--gr);color:var(--gt);font:800 1rem var(--hf);font-style:normal}
+.lg small{display:block;font:500 .7rem var(--bf);color:var(--mu)}
+nav{display:flex;gap:6px;overflow-x:auto;flex:1;min-width:200px}nav button{flex:none;min-height:44px;padding:0 14px;border-radius:10px;border:1px solid transparent;background:none;color:var(--mu);font:500 .95rem var(--bf);cursor:pointer}
+nav button.on{background:var(--sf);border-color:var(--ln);color:var(--tx)}
+.ic{width:46px;height:46px;border-radius:12px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);font-size:1.25rem;cursor:pointer}
+.tab{display:none;padding:44px 0 120px}.tab.on{display:block}
+h2{font-size:clamp(1.9rem,5vw,3rem);margin-bottom:10px}.sub{color:var(--mu);max-width:62ch;margin-bottom:28px;white-space:pre-line}
+.hero{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}@media(max-width:780px){.hero{grid-template-columns:1fr}}
+.av{aspect-ratio:1;max-width:380px;width:100%;border:1px solid var(--ln);border-radius:24px;background:var(--sf);display:grid;place-items:center;font:800 4.5rem var(--hf);color:var(--gr);overflow:hidden}.av img{width:100%;height:100%;object-fit:cover}
+.ey{color:var(--gr);font-weight:600;font-size:.9rem;margin-bottom:10px}
+h1{font-size:clamp(2.6rem,9vw,5rem);font-weight:800}.tl{font:italic 600 1.35rem var(--hf);color:var(--am);margin:8px 0 16px}
+.meta{display:flex;flex-wrap:wrap;gap:22px;margin:22px 0;padding-top:18px;border-top:1px solid var(--ln)}.meta small{display:block;color:var(--mu);font-size:.8rem}.meta b{font:600 1.05rem var(--hf)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 18px;border-radius:12px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);font:600 1rem var(--bf);text-decoration:none;cursor:pointer}
+.btn.g{background:var(--gr);border-color:var(--gr);color:var(--gt)}.btn.a{border-color:var(--am);color:var(--am)}.btn.s{min-height:38px;padding:0 12px;font-size:.9rem}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;align-items:center}
+.g3{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr))}
+.c{background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.c img,.c video{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px;background:#000}.c h3{font-size:1.25rem}.c p,.n{color:var(--mu);font-size:.95rem}.c p.pr{color:var(--am)}
+.pr{color:var(--am);font-weight:600}.mt{margin-top:auto}
+.st{display:flex;gap:12px;overflow-x:auto;padding:4px 0 18px}.st button{flex:none;width:92px;background:none;border:0;color:var(--tx);cursor:pointer;font:500 .8rem var(--bf)}
+.st img,.st span{display:block;width:76px;height:76px;margin:0 auto 6px;border-radius:50%;border:3px solid var(--gr);object-fit:cover;background:var(--sf)}
+.fm{display:grid;gap:12px}.fm label{display:grid;gap:4px;font-weight:600;font-size:.92rem}.fm label.k{display:flex;align-items:center;gap:10px}
+input,textarea,select{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--ln);border-radius:10px;padding:10px 12px;min-height:46px;width:100%}textarea{min-height:90px}input[type=checkbox]{width:22px;min-height:22px}
+.two{display:grid;gap:12px;grid-template-columns:1fr 1fr}@media(max-width:560px){.two{grid-template-columns:1fr}}
+.fl{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:9;display:flex;gap:8px}
+dialog{border:1px solid var(--ln);border-radius:20px;background:var(--sf);color:var(--tx);width:min(560px,100% - 24px);max-height:92svh;overflow:auto;padding:22px}dialog::backdrop{background:rgba(0,0,0,.78)}
+dialog>.x{position:absolute;right:10px;top:10px;width:44px;height:44px;border-radius:12px;border:1px solid var(--ln);background:var(--bg);color:var(--tx);cursor:pointer}dialog>h3{padding-right:48px;margin-bottom:12px}
+.pano{height:min(60svh,420px);border-radius:14px;background-repeat:repeat-x;background-size:auto 100%;cursor:grab;touch-action:pan-y;margin-bottom:12px}
+.num{display:flex;justify-content:space-between;gap:10px;padding:12px;margin:8px 0;border:1px solid var(--ln);border-radius:12px;background:var(--bg)}
+.mm{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}.mm button{min-height:56px;border-radius:12px;border:1px solid var(--ln);background:var(--bg);color:var(--tx);cursor:pointer;font:600 .9rem var(--bf)}.mm button.on{border-color:var(--am);color:var(--am)}
+.tk{border:2px dashed var(--am);border-radius:16px;padding:18px;margin:10px 0;background:var(--bg)}.tk b{display:block;font:800 1.9rem ui-monospace,Consolas,monospace;color:var(--gr);margin:6px 0}
+.bb{padding:10px 14px;border-radius:14px;max-width:85%;margin:6px 0;background:var(--bg);border:1px solid var(--ln)}.bb.me{margin-left:auto;border-color:var(--gr)}.bb small{display:block;color:var(--mu);font-size:.75rem}
+.cm{border-left:3px solid var(--ln);padding-left:12px;margin:8px 0}
+.toast,.cb{position:fixed;left:12px;right:12px;bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:12;max-width:520px;margin:0 auto;background:var(--sf);border:1px solid var(--am);border-radius:16px;padding:14px}
+video{width:100%;border-radius:12px;background:#000}
+footer{border-top:1px solid var(--ln);padding:28px 0 110px;color:var(--mu);font-size:.9rem}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style></head><body>
+<header><div class="w top"><a class="lg" href="#chef" id="lg"></a><nav id="nav" aria-label="Sections"></nav><button class="ic" id="th" type="button"></button><button class="btn" id="me" type="button">Mon espace</button></div></header>
+<div class="w" id="an"></div>
+<main class="w" id="m"></main>
+<footer><div class="w"><div class="row"><button class="btn s" id="fa" type="button">À propos</button><button class="btn s" id="fc" type="button">Conditions d'utilisation</button></div><p id="ft" style="margin-top:14px"></p></div></footer>
+<div class="fl"><button class="btn a" id="bp" type="button">Payer</button><a class="btn g" id="bf" target="_blank" rel="noopener" hidden>Fil privé</a></div>
+<div class="cb" id="cb" hidden><p>Ce site mesure sa fréquentation (pages vues, appareil, pays approximatif) pour s'améliorer. Aucune donnée n'est vendue.</p><div class="row"><button class="btn g s" id="ca" type="button">Accepter</button><button class="btn s" id="cr" type="button">Refuser</button></div></div>
+<script src="config.js"></script>
+<script>
+const CFG=window.CFG||{url:"",key:""};
+const $=i=>document.getElementById(i);
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const lk=(t,h,c)=>{const a=el('a',c,t);a.href=h;a.target='_blank';a.rel='noopener';return a};
+const btn=(t,c,f)=>{const b=el('button',c,t);b.type='button';b.onclick=f;return b};
+const mrg=(a,b)=>{const o={...a};for(const k in b||{})o[k]=(a[k]&&!Array.isArray(a[k])&&typeof a[k]==='object')?mrg(a[k],b[k]):b[k];return o};
+const fld=(t,i)=>{const l=el('label',0,t);l.appendChild(i);return l};
+const fd=d=>d?new Date(d).toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}):'';
+const ls={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
+const DEV=(()=>{let d=ls.get('co_dev');if(!d){d=crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2)+Date.now().toString(36);ls.set('co_dev',d)}return d})();
+const H={apikey:CFG.key,Authorization:'Bearer '+CFG.key},JH={...H,'Content-Type':'application/json'};
+const get=p=>CFG.url?fetch(CFG.url+'/rest/v1/'+p,{headers:H}).then(r=>r.ok?r.json():[]).catch(()=>[]):Promise.resolve([]);
+const post=(p,b)=>CFG.url?fetch(CFG.url+'/rest/v1/'+p,{method:'POST',headers:{...JH,Prefer:'return=minimal'},body:JSON.stringify(b)}).then(r=>r.ok).catch(()=>false):Promise.resolve(false);
+const rpc=(n,b)=>CFG.url?fetch(CFG.url+'/rest/v1/rpc/'+n,{method:'POST',headers:JH,body:JSON.stringify(b)}).then(r=>r.json().then(j=>({ok:r.ok,j}),()=>({ok:r.ok,j:null}))).catch(()=>({ok:false,j:null})):Promise.resolve({ok:false,j:null});
+const DEF={brand:{company:"novakorax corporation",collectif:"Novakorax",tagline:"Haute Gastronomie"},
+chef:{name:"Chef Omar",eyebrow:"Haute gastronomie & alchimie africaine",title:"Maître de l'Alchimie Culinaire Sénégalaise",bio:"Haute Gastronomie, Terroirs Ouest-Africains & Botanique Rare. À la croisée des traditions culinaires millénaires d'Afrique de l'Ouest et des techniques contemporaines de la gastronomie moléculaire et du fumage d'art, chaque assiette est un voyage initiatique.",avatar:"",distinction:"Maître Cuisinier 2024",signature:"Fumage Bois d'Acacia",accreditation:"KYC Vérifié A+",dispo:"Disponible pour Dîners Privés",bioFull:""},
+socials:{whatsapp:"",phone:"",instagram:"",tiktok:"",youtube:"",email:"",telegram:""},
+pay:{wave:"+221 78 184 38 80",orange:"",titulaire:"",cash:"Paiement en espèces auprès du chef ou de son équipe.",endpoint:""},
+packages:[],dishes:[],masterclasses:[],
+options:{maintenance:false,maintenanceMsg:"Ajustement en cours. Retour très bientôt.",show_reels:true,show_plats:true,show_calendrier:true,show_reserver:true,show_livre:true,show_masterclasses:true,pay_wave:true,pay_orange:true,pay_cash:true,stories_hours:24},
+legal:{about:"",terms:"Réservations : toute demande est confirmée par le chef ou son équipe ; une demande n'est pas une confirmation.\nPaiements : par Wave, Orange Money ou espèces. Un paiement mobile n'est valide qu'après vérification du reçu par le chef ; les conditions d'annulation et de remboursement sont convenues avec le chef.\nTickets d'événement : un ticket est personnel et présenté à l'entrée ; une place peut être annulée par l'organisateur en cas de force majeure.\nDonnées personnelles : votre numéro et vos coordonnées restent privés, visibles seulement par le chef et l'administrateur, et servent uniquement à vous répondre.\nAvis et commentaires : ils sont publics, modérés, et ne doivent contenir ni insulte ni information personnelle.\nContenus : les photos, vidéos et recettes appartiennent au Chef Omar et à ses partenaires."}};
+const dlg=el('dialog');document.body.appendChild(dlg);
+const view=n=>{dlg.innerHTML='';const x=el('button','x','✕');x.type='button';x.setAttribute('aria-label','Fermer');x.onclick=()=>dlg.close();dlg.appendChild(x);n.forEach(e=>dlg.appendChild(e));if(!dlg.open)dlg.showModal()};
+dlg.addEventListener('close',()=>{dlg.innerHTML=''});
+const toast=(t,a,l)=>{const d=el('div','toast');d.setAttribute('role','status');d.appendChild(el('p',0,t));const r=el('div','row');if(a)r.appendChild(btn(l||'Actualiser','btn g s',()=>{d.remove();a()}));r.appendChild(btn('Fermer','btn s',()=>d.remove()));d.appendChild(r);document.body.appendChild(d);setTimeout(()=>d.remove(),20000)};
+const notify=(t,b)=>{try{if('Notification' in window&&Notification.permission==='granted')new Notification(t,{body:b})}catch(e){}};
+const track=(page,extra)=>{if(ls.get('co_consent')==='1')post('visits',{device:DEV,page:String(page).slice(0,100),ref:(document.referrer||'').slice(0,120),ua:navigator.userAgent.slice(0,120),lang:navigator.language,tz:(Intl.DateTimeFormat().resolvedOptions().timeZone||''),...extra})};
+const wa=(D,t)=>{const n=(D.socials.whatsapp||'').replace(/\D/g,'');return n?'https://wa.me/'+n+'?text='+encodeURIComponent(t):''};
+const sec=(id,title,sub)=>{const s=el('section','tab');s.id=id;if(title)s.appendChild(el('h2',0,title));if(sub)s.appendChild(el('p','sub',sub));$('m').appendChild(s);return s};
+const empty=(s,t)=>s.appendChild(el('p','n',t));
+const TH=[['noir','●','thème noir accentué'],['nuit','☾','thème bleu de nuit'],['ivoire','☼','thème blanc cassé']];
+const theme=n=>{const i=Math.max(0,TH.findIndex(x=>x[0]===n)),t=TH[i],nx=TH[(i+1)%3];document.documentElement.dataset.theme=t[0];ls.set('co_theme',t[0]);$('th').textContent=t[1];const lb='Actuel : '+t[2]+'. Passer au '+nx[2];$('th').title=lb;$('th').setAttribute('aria-label',lb);document.querySelector('meta[name=theme-color]').content={noir:'#090a0f',nuit:'#0D1628',ivoire:'#F7F4ED'}[t[0]]};
+theme(document.documentElement.dataset.theme);$('th').onclick=()=>theme(TH[(TH.findIndex(x=>x[0]===document.documentElement.dataset.theme)+1)%3][0]);
+const copy=t=>(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>true,()=>{prompt('Copiez :',t);return false});
+
+Promise.all([get('site_content?select=id,data'),get('events?actif=eq.true&order=date.asc'),get('reels?order=created_at.desc&limit=60'),get('announcements?actif=eq.true&order=created_at.desc&limit=3'),get('reviews?visible=eq.true&order=created_at.desc&limit=100'),get('review_comments?order=created_at.asc&limit=400')]).then(([sc,evs,rl,ans,rv,rc])=>{
+let X={},META={};sc.forEach(r=>{if(r.id==='meta')META=r.data||{};else X={...X,...r.data}});const D=mrg(DEF,X),C=D.chef,S=D.socials,P=D.pay,O=D.options;
+document.title=C.name+' — '+C.title;const ini=C.name.split(' ').map(w=>w[0]).join('').slice(0,2);
+$('lg').appendChild(el('i',0,ini));const lt=el('span',0,C.name.toUpperCase());lt.appendChild(el('small',0,D.brand.collectif+' · '+D.brand.tagline));$('lg').appendChild(lt);
+$('ft').textContent='© 2026 '+D.brand.company+' . Conçu et construit en public.';
+if(!CFG.url)$('m').appendChild(el('p','n','Site non configuré : renseignez config.js.'));
+const tabs=[];
+if(O.maintenance){const m=sec('maint','Maintenance en cours',O.maintenanceMsg);m.classList.add('on');$('bp').hidden=true;$('nav').hidden=true;$('me').hidden=true;return}
+/* ---- Chef ---- */
+let s=sec('chef','');tabs.push(['chef','Chef']);const h=el('div','hero'),av=el('div','av',ini);
+if(C.avatar){const im=new Image();im.alt=C.name;im.onload=()=>{av.textContent='';av.appendChild(im)};im.src=C.avatar}
+h.appendChild(av);const r=el('div');r.appendChild(el('p','ey',C.eyebrow));r.appendChild(el('h1',0,C.name.toUpperCase()));r.appendChild(el('p','tl',C.title));r.appendChild(el('p','sub',C.bio));
+const mt=el('div','meta');[['Distinction',C.distinction],['Signature',C.signature],['Accréditation',C.accreditation]].forEach(x=>{if(x[1]){const d=el('div');d.appendChild(el('small',0,x[0]));d.appendChild(el('b',0,x[1]));mt.appendChild(d)}});r.appendChild(mt);
+const cr=el('div','row');if(O.show_reserver!==false)cr.appendChild(btn('Demande de réservation','btn g',()=>go('reserver')));if(C.bioFull)cr.appendChild(btn('Voir plus (biographie)','btn',()=>view([el('h3',0,C.name),el('p','sub',C.bioFull)])));r.appendChild(cr);
+const so=el('div','row');[['WhatsApp',S.whatsapp&&wa(D,'Bonjour Chef '+C.name)],['Appel',S.phone&&'tel:'+S.phone],['Instagram',S.instagram],['TikTok',S.tiktok],['YouTube',S.youtube],['Email',S.email&&'mailto:'+S.email]].forEach(x=>{if(x[1])so.appendChild(lk(x[0],x[1],'btn'))});r.appendChild(so);
+if(C.dispo)r.appendChild(el('p','n',C.dispo));h.appendChild(r);s.appendChild(h);
+/* ---- Réels & stories ---- */
+const seen=x=>{rpc('bump_view',{p_reel:x.id});track('reel:'+x.id)};
+const openReel=x=>{const n=[el('h3',0,x.titre)];if(x.type==='video'){const v=el('video');v.src=x.url;v.controls=true;v.autoplay=true;v.playsInline=true;v.addEventListener('play',()=>seen(x),{once:true});n.push(v)}else{if(x.type==='image'){const i=new Image();i.src=x.url;i.alt=x.titre;i.style.cssText='width:100%;border-radius:12px';n.push(i)}seen(x)}if(x.texte)n.push(el('p','sub',x.texte));view(n)};
+s=sec('reels','Menus vidéo, réels & stories','Gestes culinaires et techniques de dressage.');tabs.push(['reels','Réels']);
+const lim=(+O.stories_hours||24)*36e5,sts=rl.filter(x=>x.story&&Date.now()-new Date(x.created_at)<lim);
+const thumb=x=>{if(x.type==='image'){const i=new Image();i.alt=x.titre;i.loading='lazy';i.src=x.url;return i}if(x.type==='video'){const v=el('video');v.muted=true;v.preload='metadata';v.src=x.url+'#t=0.5';return v}return null};
+if(sts.length){const sr=el('div','st');sts.forEach(x=>{const b=btn('','',()=>openReel(x));const t=thumb(x);b.appendChild(t&&x.type==='image'?t:el('span'));b.appendChild(document.createTextNode(x.titre));sr.appendChild(b)});s.appendChild(sr)}
+if(rl.length){const g=el('div','g3');rl.forEach(x=>{const c=el('article','c'),t=thumb(x);if(t)c.appendChild(t);c.appendChild(el('h3',0,x.titre));if(x.texte)c.appendChild(el('p',0,x.texte.slice(0,110)));if(x.views)c.appendChild(el('p','n',x.views+' vues'));c.appendChild(btn(x.type==='video'?'▶ Regarder':'Voir','btn g mt',()=>openReel(x)));g.appendChild(c)});s.appendChild(g)}else empty(s,'Aucun réel pour le moment.');
+/* ---- Plats VR ---- */
+s=sec('plats','Plats en 360°','Faites glisser l\'image pour explorer chaque assiette.');tabs.push(['plats','Plats VR']);
+const dish=x=>{const p=el('div','pano');p.style.backgroundImage='url("'+String(x.image).replace(/"/g,'%22')+'")';let px=0,sx=null;p.onpointerdown=e=>{sx=e.clientX-px;p.setPointerCapture(e.pointerId)};p.onpointermove=e=>{if(sx!==null){px=e.clientX-sx;p.style.backgroundPositionX=px+'px'}};p.onpointerup=()=>{sx=null};
+const n=[el('h3',0,x.name),p];if(x.tagline)n.push(el('p','sub',x.tagline));[['Cuisson',x.time],['Température',x.temp],['Ingrédients',(x.ingredients||[]).join(', ')],['Notes de dégustation',(x.notes||[]).join(', ')],['Accords',(x.pairings||[]).join(', ')],['Allergènes',(x.allergens||[]).join(', ')]].forEach(a=>{if(a[1]){const d=el('div','num');d.appendChild(el('span',0,a[0]));d.appendChild(el('b',0,a[1]));n.push(d)}});view(n)};
+if(D.dishes.length){const g=el('div','g3');D.dishes.forEach(x=>{const c=el('article','c');c.appendChild(el('h3',0,x.name));if(x.native)c.appendChild(el('p','pr',x.native));if(x.category)c.appendChild(el('p',0,x.category));if(x.tagline)c.appendChild(el('p',0,x.tagline));if(x.image)c.appendChild(btn('Visiter en 360°','btn g mt',()=>dish(x)));g.appendChild(c)});s.appendChild(g)}else empty(s,'Les plats seront publiés prochainement.');
+/* ---- Calendrier + tickets ---- */
+const tix=()=>{try{return JSON.parse(ls.get('co_tix')||'[]')}catch(e){return[]}};
+const tkText=t=>'TICKET '+C.name.toUpperCase()+'\n'+t.event+'\n'+fd(t.date)+(t.lieu?' · '+t.lieu:'')+'\nInvité : '+t.nom+'\nCode : '+t.ticket;
+const tkPng=t=>{const c=document.createElement('canvas');c.width=900;c.height=480;const x=c.getContext('2d');x.fillStyle='#0D1628';x.fillRect(0,0,900,480);x.strokeStyle='#F5A524';x.lineWidth=4;x.strokeRect(20,20,860,440);x.fillStyle='#F5A524';x.font='bold 32px Georgia';x.fillText('TICKET — '+C.name.toUpperCase(),50,90);x.fillStyle='#fff';x.font='bold 40px Georgia';x.fillText(String(t.event).slice(0,34),50,160);x.font='26px sans-serif';x.fillText(fd(t.date)+(t.lieu?' · '+t.lieu:''),50,215);x.fillText('Invité : '+t.nom,50,270);x.fillStyle='#10B981';x.font='bold 64px monospace';x.fillText(t.ticket,50,380);x.fillStyle='#9AA4B8';x.font='20px sans-serif';x.fillText('Présentez ce code à l\'entrée',50,425);c.toBlob(b=>{const a=el('a');a.href=URL.createObjectURL(b);a.download='ticket-'+t.ticket+'.png';document.body.appendChild(a);a.click();a.remove()})};
+const showTicket=t=>{const b=el('div','tk');b.appendChild(el('p','pr',fd(t.date)+(t.lieu?' · '+t.lieu:'')));b.appendChild(el('h3',0,t.event));b.appendChild(el('p',0,'Invité : '+t.nom));b.appendChild(el('b',0,t.ticket));if(t.statut==='annule')b.appendChild(el('p','pr','Cette place a été annulée.'));
+const r=el('div','row'),ms=el('p','n');ms.setAttribute('role','status');r.appendChild(btn('Copier','btn',()=>copy(tkText(t)).then(o=>{if(o)ms.textContent='Ticket copié.'})));r.appendChild(btn('Télécharger (image)','btn g',()=>tkPng(t)));view([el('h3',0,'Votre ticket'),b,r,el('p','n','Vous pouvez aussi faire une capture d\'écran. Retrouvez-le toujours dans « Mon espace ».'),ms])};
+const regForm=x=>{const f=el('form','fm'),a=el('input'),b=el('input'),c=el('input'),d=el('input'),ms=el('p','n');a.required=b.required=true;b.type='tel';c.type='email';ms.setAttribute('role','status');
+f.appendChild(fld('Nom complet',a));f.appendChild(fld('Téléphone / WhatsApp (reste privé)',b));f.appendChild(fld('Email (facultatif)',c));f.appendChild(fld('Pseudo Telegram (facultatif)',d));f.appendChild(el('p','n','Votre numéro n\'est jamais affiché publiquement : seuls le chef et l\'administrateur le voient, pour vous écrire.'));
+const sb=el('button','btn g','Confirmer ma place');f.appendChild(sb);f.appendChild(ms);
+f.onsubmit=e=>{e.preventDefault();sb.disabled=true;ms.textContent='Confirmation…';rpc('register_event',{p_event:x.id,p_nom:a.value,p_tel:b.value,p_email:c.value,p_tg:d.value,p_device:DEV}).then(r=>{sb.disabled=false;if(r.ok&&r.j&&r.j.ticket){const l=tix().filter(t=>t.ticket!==r.j.ticket);l.unshift(r.j);ls.set('co_tix',JSON.stringify(l));showTicket(r.j);track('inscription:'+x.id)}else ms.textContent=JSON.stringify(r.j||'').includes('complet')?'Cet événement est complet.':'Confirmation impossible. Vérifiez vos informations et réessayez.'})};view([el('h3',0,'Confirmer ma place'),el('p','n',x.titre+' — '+fd(x.date)),f])};
+s=sec('calendrier','Calendrier','Confirmez votre place : vous recevez un ticket personnel à présenter à l\'entrée.');tabs.push(['calendrier','Calendrier']);
+if(evs.length){const g=el('div','g3');evs.forEach(x=>{const c=el('article','c');c.appendChild(el('p','pr',fd(x.date)));c.appendChild(el('h3',0,x.titre));if(x.lieu)c.appendChild(el('p',0,x.lieu));if(x.note)c.appendChild(el('p',0,x.note));if(x.capacite)c.appendChild(el('p','n','Places limitées : '+x.capacite));const mine=tix().find(t=>t.event_id===x.id&&t.statut!=='annule');c.appendChild(mine?btn('Voir mon ticket','btn mt',()=>showTicket(mine)):btn('Confirmer ma place','btn g mt',()=>regForm(x)));g.appendChild(c)});s.appendChild(g)}else empty(s,'Aucun événement planifié.');
+/* ---- Réserver ---- */
+s=sec('reserver','Réservation haute gastronomie','Dites-nous vos envies, vos allergies et vos disponibilités.');tabs.push(['reserver','Réserver']);
+if(D.packages.length){const pk=el('div','g3');D.packages.forEach(p=>{const c=el('article','c');c.appendChild(el('h3',0,p.name));if(p.price)c.appendChild(el('p','pr',p.price));if(p.description)c.appendChild(el('p',0,p.description));c.appendChild(btn('Choisir cette formule','btn mt',()=>{sel.value=p.name;sel.onchange();fm.scrollIntoView({behavior:'smooth'})}));pk.appendChild(c)});s.appendChild(pk)}
+const fm=el('form','fm'),sel=el('select');fm.style.marginTop='24px';sel.appendChild(new Option('Formule sur mesure (sur devis)','Sur mesure'));D.packages.forEach(p=>sel.appendChild(new Option(p.name+(p.price?' — '+p.price:''),p.name)));
+const fn=el('input'),ln=el('input'),tel=el('input'),dt=el('input'),cr2=el('input'),gs=el('input'),al=el('input'),rq=el('textarea');fn.required=ln.required=tel.required=true;tel.type='tel';dt.type='date';gs.type='number';gs.min=1;gs.value=2;
+const t2=el('div','two');t2.appendChild(fld('Prénom',fn));t2.appendChild(fld('Nom',ln));fm.appendChild(t2);fm.appendChild(fld('Téléphone',tel));fm.appendChild(fld('Formule',sel));const sd=el('p','n');fm.appendChild(sd);sel.onchange=()=>{const q=D.packages.find(p=>p.name===sel.value);sd.textContent=(q&&q.description)||''};
+const t3=el('div','two');t3.appendChild(fld('Date souhaitée',dt));t3.appendChild(fld('Créneau (ex : 20h)',cr2));fm.appendChild(t3);fm.appendChild(fld('Nombre d\'invités',gs));fm.appendChild(fld('Allergies et régimes',al));fm.appendChild(fld('Demandes particulières',rq));
+const ro=el('p','n');ro.setAttribute('role','status');fm.appendChild(btn('Envoyer la demande par WhatsApp','btn g',()=>fm.requestSubmit()));fm.appendChild(ro);
+fm.onsubmit=e=>{e.preventDefault();const u=wa(D,'Demande de réservation\nNom : '+fn.value+' '+ln.value+'\nTéléphone : '+tel.value+'\nFormule : '+sel.value+'\nDate : '+dt.value+' '+cr2.value+'\nInvités : '+gs.value+'\nAllergies : '+al.value+'\nDemandes : '+rq.value);if(u)window.open(u,'_blank','noopener');else ro.textContent='Le numéro WhatsApp du chef n\'est pas encore renseigné.'};s.appendChild(fm);
+/* ---- Livre d'or public ---- */
+s=sec('livre','Livre d\'or','Partagez votre expérience : avis, commentaires et likes sont publics. Vous pouvez masquer votre nom.');tabs.push(['livre','Livre d\'Or']);
+const cm={};rc.forEach(c=>(cm[c.review_id]=cm[c.review_id]||[]).push(c));let liked={};try{liked=JSON.parse(ls.get('co_likes')||'{}')}catch(e){}
+const stars=n=>'★'.repeat(n)+'☆'.repeat(5-n);const lst=el('div','g3');
+const rvCard=r=>{const c=el('article','c');c.appendChild(el('p','pr',stars(r.note)));c.appendChild(el('p',0,r.texte));c.appendChild(el('h3',0,r.anonyme?'Hôte anonyme':r.nom));c.appendChild(el('p','n',fd(r.created_at)));
+const bar=el('div','row'),lb=btn('♥ '+(r.likes||0),'btn s',()=>{if(liked[r.id])return;rpc('like_review',{p_id:r.id,p_device:DEV}).then(x=>{if(x.ok){liked[r.id]=1;ls.set('co_likes',JSON.stringify(liked));lb.textContent='♥ '+x.j}})});if(liked[r.id])lb.setAttribute('aria-pressed','true');lb.setAttribute('aria-label','J\'aime cet avis');bar.appendChild(lb);
+const cl=cm[r.id]||[],box=el('div');box.hidden=true;const cb=btn('Commentaires ('+cl.length+')','btn s',()=>{box.hidden=!box.hidden});bar.appendChild(cb);c.appendChild(bar);
+cl.forEach(k=>{const d=el('div','cm');d.appendChild(el('p',0,k.texte));d.appendChild(el('p','n',(k.nom||'Anonyme')+' · '+fd(k.created_at)));box.appendChild(d)});
+const f=el('form','fm'),n1=el('input'),t1=el('input');n1.placeholder='Votre nom (facultatif)';t1.placeholder='Votre commentaire';t1.required=true;t1.minLength=2;t1.maxLength=600;f.appendChild(n1);f.appendChild(t1);f.appendChild(el('button','btn s','Commenter'));
+f.onsubmit=e=>{e.preventDefault();post('review_comments',{review_id:r.id,nom:(n1.value.trim()||'Anonyme').slice(0,60),texte:t1.value.trim()}).then(ok=>{if(ok){const d=el('div','cm');d.appendChild(el('p',0,t1.value));d.appendChild(el('p','n',(n1.value.trim()||'Anonyme')+' · à l\'instant'));box.insertBefore(d,f);t1.value=''}})};box.appendChild(f);c.appendChild(box);return c};
+const rf=el('form','fm'),rn=el('input'),ra=el('input'),rs=el('select'),rt=el('textarea'),rm=el('p','n');ra.type='checkbox';rn.maxLength=60;rt.required=true;rt.minLength=3;rt.maxLength=1000;rm.setAttribute('role','status');[5,4,3,2,1].forEach(n=>rs.appendChild(new Option(stars(n)+' ('+n+'/5)',n)));
+rf.appendChild(fld('Votre nom',rn));const kl=fld('Masquer mon nom (avis anonyme)',ra);kl.className='k';kl.insertBefore(ra,kl.firstChild);rf.appendChild(kl);rf.appendChild(fld('Note',rs));rf.appendChild(fld('Votre avis',rt));rf.appendChild(el('button','btn g','Publier mon avis'));rf.appendChild(rm);
+rf.onsubmit=e=>{e.preventDefault();if(Date.now()-(+ls.get('co_rv')||0)<60000){rm.textContent='Merci de patienter une minute entre deux avis.';return}const an=ra.checked,o={nom:an?'Anonyme':(rn.value.trim()||'Anonyme').slice(0,60),anonyme:an,note:+rs.value,texte:rt.value.trim()};post('reviews',o).then(ok=>{if(ok){ls.set('co_rv',Date.now());lst.insertBefore(rvCard({...o,id:'x'+Date.now(),likes:0,created_at:new Date().toISOString()}),lst.firstChild);rt.value='';rm.textContent='Merci ! Votre avis est publié.';track('avis')}else rm.textContent='Publication impossible, réessayez.'})};
+if(rv.length){const avg=rv.reduce((a,x)=>a+x.note,0)/rv.length;s.appendChild(el('p','pr','Note moyenne : '+avg.toFixed(1)+' / 5 · '+rv.length+' avis'))}else empty(s,'Aucun avis pour le moment. Soyez le premier.');
+rv.forEach(r=>lst.appendChild(rvCard(r)));s.appendChild(lst);const fh=el('h3',0,'Laisser un avis');fh.style.margin='28px 0 12px';s.appendChild(fh);s.appendChild(rf);
+/* ---- Masterclasses & paiement ---- */
+s=sec('masterclasses','Formations, ateliers & exclusivités','Inscrivez-vous, payez, puis recevez vos leçons par Telegram, WhatsApp ou dans votre espace.');tabs.push(['masterclasses','Masterclasses']);
+if(D.masterclasses.length){const g=el('div','g3');D.masterclasses.forEach(x=>{const c=el('article','c');if(x.date)c.appendChild(el('p','pr',fd(x.date)));c.appendChild(el('h3',0,x.title));if(x.description)c.appendChild(el('p',0,x.description));if(x.prix)c.appendChild(el('p','pr',x.prix));c.appendChild(btn('S\'inscrire et payer','btn g mt',()=>pay({title:x.title,prix:x.prix,id:x.id,type:'Masterclass'})));g.appendChild(c)});s.appendChild(g)}else empty(s,'Les masterclasses sont publiées par le chef dès qu\'elles sont programmées.');
+let meth='wave';
+const shrink=(file,max,cb)=>{createImageBitmap(file).then(b=>{const k=Math.min(1,max/b.width),c=document.createElement('canvas');c.width=b.width*k;c.height=b.height*k;c.getContext('2d').drawImage(b,0,0,c.width,c.height);c.toBlob(bl=>cb(bl||file),'image/jpeg',.82)}).catch(()=>cb(file))};
+function pay(it){it=it||{title:'Prestation gastronomique',type:'Réservation'};const ME=[['wave','Wave'],['orange','Orange Money'],['cash','Espèces']].filter(m=>O['pay_'+m[0]]!==false);if(!ME.length){view([el('h3',0,'Paiement'),el('p','n','Le paiement en ligne est momentanément indisponible.')]);return}if(!ME.some(m=>m[0]===meth))meth=ME[0][0];
+const ref='TX-'+String(Date.now()).slice(-6)+'-'+Math.floor(Math.random()*900+100),n=[el('h3',0,'Paiement'),el('p','n','Réf : '+ref),el('p','n',it.type+' : '+it.title)],mt=el('input');mt.placeholder='Ex : 50 000 FCFA';mt.value=it.prix||'';if(!it.prix)n.push(fld('Montant à régler',mt));else n.push(el('p','pr','Montant : '+it.prix));
+const mm=el('div','mm'),box=el('div');ME.forEach(m=>mm.appendChild(btn(m[1],meth===m[0]?'on':'',()=>{meth=m[0];pay(it)})));n.push(mm,box);
+if(meth==='cash'){box.appendChild(el('p','n',P.cash||'Paiement sur place.'));const u=wa(D,'Paiement en espèces — '+it.title+' — Réf '+ref);if(u)box.appendChild(lk('Prévenir le chef sur WhatsApp',u,'btn g'))}
+else{const num=meth==='wave'?P.wave:P.orange;if(num){const d=el('div','num');d.appendChild(el('span',0,meth==='wave'?'Wave':'Orange Money'));d.appendChild(el('b',0,num));box.appendChild(d)}else box.appendChild(el('p','n','Ce numéro n\'est pas encore renseigné.'));if(P.titulaire)box.appendChild(el('p','n','Au nom de : '+P.titulaire));box.appendChild(el('p','n','Transférez le montant, puis envoyez la capture d\'écran du reçu.'));
+const c=el('input'),f=el('input'),hp=el('input'),fo=el('form','fm'),out=el('p','n'),sb=el('button','btn g','Envoyer mon reçu');c.required=true;f.type='file';f.accept='image/*';f.required=true;hp.style.cssText='position:absolute;left:-9999px';hp.tabIndex=-1;hp.setAttribute('aria-hidden','true');out.setAttribute('role','status');
+fo.appendChild(fld('Votre numéro WhatsApp, email ou pseudo Telegram',c));fo.appendChild(fld('Capture du reçu',f));fo.appendChild(hp);fo.appendChild(sb);fo.appendChild(out);
+fo.onsubmit=e=>{e.preventDefault();if(hp.value||!f.files[0])return;sb.disabled=true;out.textContent='Envoi en cours…';shrink(f.files[0],1280,bl=>{const x=new FormData();x.set('contact',c.value);x.set('formation',it.title);x.set('fid',it.id||'');x.set('methode',meth);x.set('ref',ref);x.set('montant',mt.value);x.set('device',DEV);x.set('recu',bl,'recu.jpg');
+fetch(P.endpoint||'/.netlify/functions/inscription',{method:'POST',body:x}).then(r=>r.json()).then(j=>{if(!j.ok)throw 0;out.textContent='Reçu envoyé. Le chef le vérifie : vous serez informé dans « Mon espace » et sur le contact laissé.';track('paiement:'+ref)}).catch(()=>{sb.disabled=false;out.textContent='Envoi automatique indisponible : envoyez le reçu au chef'+(S.telegram?' sur Telegram (@'+S.telegram.replace(/^@/,'')+').':' par WhatsApp.')})})};box.appendChild(fo)}
+view(n)}
+$('bp').onclick=()=>pay();if(!['wave','orange','cash'].some(k=>O['pay_'+k]!==false))$('bp').hidden=true;
+if(S.telegram){const f=$('bf');f.hidden=false;f.href='https://t.me/'+S.telegram.replace(/^@/,'')}
+/* ---- À propos / Conditions ---- */
+const L=D.legal;s=sec('apropos','À propos',L.about||C.bioFull||C.bio);tabs.push(['apropos','À propos']);
+s=sec('conditions','Conditions d\'utilisation',L.terms);tabs.push(['conditions','Conditions']);
+/* ---- Navigation ---- */
+const OM={reels:'show_reels',plats:'show_plats',calendrier:'show_calendrier',reserver:'show_reserver',livre:'show_livre',masterclasses:'show_masterclasses'};
+const vt=tabs.filter(t=>{if(OM[t[0]]&&O[OM[t[0]]]===false){$(t[0]).remove();return false}return true});
+function go(id){if(!$(id))id='chef';document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.id===id));[...$('nav').children].forEach(b=>b.classList.toggle('on',b.dataset.id===id));if(location.hash!=='#'+id)history.replaceState(null,'','#'+id);scrollTo(0,0);track('page:'+id)}
+vt.forEach(t=>{const b=btn(t[1],'',()=>go(t[0]));b.dataset.id=t[0];$('nav').appendChild(b)});$('fa').onclick=()=>go('apropos');$('fc').onclick=()=>go('conditions');
+/* ---- Annonces ---- */
+const an=ans.find(a=>ls.get('co_an_'+a.id)!=='1');if(an){const c=el('article','c');c.style.marginTop='16px';c.appendChild(el('p','pr','Annonce'));c.appendChild(el('h3',0,an.titre));if(an.media_url&&an.media_type==='video'){const v=el('video');v.src=an.media_url;v.controls=true;v.playsInline=true;c.appendChild(v)}else if(an.media_url){const i=new Image();i.src=an.media_url;i.alt='';c.appendChild(i)}if(an.texte)c.appendChild(el('p',0,an.texte));c.appendChild(btn('Fermer','btn s',()=>{ls.set('co_an_'+an.id,'1');c.remove()}));$('an').appendChild(c)}
+/* ---- Mon espace ---- */
+const space=()=>{const n=[el('h3',0,'Mon espace')];const body=el('div');n.push(body);view(n);body.appendChild(el('p','n','Chargement…'));
+rpc('my_data',{p_device:DEV}).then(r=>{body.innerHTML='';const d=r.ok&&r.j?r.j:{tickets:tix(),messages:[]};
+body.appendChild(el('h3',0,'Mes tickets'));body.lastChild.style.fontSize='1.1rem';if(d.tickets.length)d.tickets.forEach(t=>{const row=el('div','num');row.appendChild(el('span',0,t.event+' · '+t.ticket));row.appendChild(btn('Voir','btn s',()=>showTicket(t)));body.appendChild(row)});else body.appendChild(el('p','n','Aucun ticket.'));
+const mh=el('h3',0,'Messages');mh.style.cssText='font-size:1.1rem;margin-top:16px';body.appendChild(mh);if(!d.messages.length)body.appendChild(el('p','n','Aucun message. Le chef peut vous écrire ici après votre inscription ou votre paiement.'));
+d.messages.forEach(m=>{const b=el('div','bb'+(m.direction==='user'?' me':''));if(/^https?:\/\/\S+$/.test(m.corps))b.appendChild(lk(m.corps,m.corps));else b.appendChild(el('span',0,m.corps));b.appendChild(el('small',0,(m.direction==='user'?'Vous':C.name)+' · '+new Date(m.at).toLocaleString('fr-FR')));body.appendChild(b)});
+const f=el('form','fm'),t=el('textarea'),ms=el('p','n');t.required=true;t.maxLength=1000;t.placeholder='Votre réponse…';ms.setAttribute('role','status');f.appendChild(t);f.appendChild(el('button','btn g s','Envoyer'));f.appendChild(ms);
+f.onsubmit=e=>{e.preventDefault();rpc('user_reply',{p_device:DEV,p_body:t.value}).then(x=>{if(x.ok)space();else ms.textContent='Envoi impossible : vous devez d\'abord confirmer une place ou envoyer un paiement.'})};body.appendChild(f);
+const pr=el('div','row');pr.style.marginTop='16px';if('Notification' in window)pr.appendChild(btn(Notification.permission==='granted'?'Notifications activées':'Activer les notifications','btn s',e=>{Notification.requestPermission().then(p=>{e.target.textContent=p==='granted'?'Notifications activées':'Notifications refusées'})}));
+pr.appendChild(btn('Partager ma position (facultatif)','btn s',e=>{if(!navigator.geolocation){e.target.textContent='Indisponible';return}navigator.geolocation.getCurrentPosition(p=>{post('visits',{device:DEV,page:'geo',lat:+p.coords.latitude.toFixed(2),lon:+p.coords.longitude.toFixed(2)});e.target.textContent='Position partagée (approximative)'},()=>{e.target.textContent='Position refusée'})}));body.appendChild(pr);
+body.appendChild(el('p','n','Les notifications ne fonctionnent que lorsque le site est ouvert. La position n\'est demandée que si vous cliquez ici.'))})};
+$('me').onclick=space;
+/* ---- Consentement, mises à jour, sondage messages ---- */
+const cb=$('cb');if(ls.get('co_consent')===null&&CFG.url){cb.hidden=false;$('ca').onclick=()=>{ls.set('co_consent','1');cb.hidden=true;track('page:'+(location.hash.slice(1)||'chef'))};$('cr').onclick=()=>{ls.set('co_consent','0');cb.hidden=true}}
+if(ls.get('co_v')===null)ls.set('co_v',META.v||0);
+const poll=()=>{get('site_content?id=eq.meta&select=data').then(r=>{const v=r[0]&&r[0].data&&r[0].data.v||0;if(v>(+ls.get('co_v')||0)){ls.set('co_v',v);toast('Le site a été mis à jour.',()=>location.reload());notify('Mise à jour','Le site du Chef a de nouveaux contenus.')}});
+rpc('my_data',{p_device:DEV}).then(r=>{if(r.ok&&r.j){const k=r.j.messages.filter(m=>m.direction==='staff').length,o=ls.get('co_m');if(o!==null&&k>+o){toast('Nouveau message du chef.',space,'Lire');notify('Nouveau message','Le chef vous a écrit.')}ls.set('co_m',k)}})};
+poll();setInterval(poll,60000);
+go(location.hash.slice(1)||'chef');
+});
+</script></body></html>
