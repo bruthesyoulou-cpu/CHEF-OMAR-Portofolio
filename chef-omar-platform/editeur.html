@@ -20,7 +20,7 @@ button,.b{font:600 .95rem system-ui,sans-serif;min-height:42px;padding:0 14px;bo
 dialog{border:1px solid var(--ln);border-radius:16px;background:var(--sf);color:var(--tx);width:min(720px,100% - 16px);max-height:92svh;padding:14px}dialog::backdrop{background:rgba(0,0,0,.78)}dialog img,dialog video{max-width:100%;border-radius:10px}
 :focus-visible{outline:3px solid var(--am);outline-offset:2px}
 </style></head><body><main>
-<h1>Console Chef Omar</h1><p class="n" id="st" role="status"></p>
+<h1>Console Chef Omar <small class="n">· version 3 (connexion corrigée)</small></h1><p class="n" id="st" role="status"></p>
 <form id="lo" hidden><label>Email<input type="email" id="em" required autocomplete="username"></label><label>Mot de passe<input type="password" id="pw" required autocomplete="current-password"></label><button class="p">Se connecter</button></form>
 <div id="app" hidden><div class="hd"><span id="who"></span><span><a class="b s" href="index.html" target="_blank" rel="noopener">Voir le site</a> <button class="s" id="out" type="button">Déconnexion</button></span></div><nav id="tb" aria-label="Rubriques"></nav><section id="pn"></section></div>
 </main><dialog id="dg"></dialog>
@@ -31,7 +31,7 @@ const $=i=>document.getElementById(i),mk=(t,c,x)=>{const e=document.createElemen
 const bt=(t,c,f)=>{const b=mk('button',c,t);b.type='button';b.onclick=f;return b};
 const say=t=>{$('st').textContent=t},fr=d=>d?new Date(d).toLocaleString('fr-FR',{dateStyle:'short',timeStyle:'short'}):'';
 const OPT={maintenance:false,maintenanceMsg:'Ajustement en cours. Retour très bientôt.',show_reels:true,show_plats:true,show_calendrier:true,show_reserver:true,show_livre:true,show_masterclasses:true,pay_wave:true,pay_orange:true,pay_cash:true,stories_hours:24};
-const api=(m,p,b,h)=>fetch(CFG.url+p,{method:m,headers:{apikey:CFG.key,Authorization:'Bearer '+(TOK||CFG.key),'Content-Type':'application/json',...(h||{})},body:b==null?undefined:JSON.stringify(b)}).then(r=>r.text().then(t=>{let j=null;try{j=JSON.parse(t)}catch(e){}return{ok:r.ok,s:r.status,j}})).catch(()=>({ok:false,s:0,j:null}));
+const api=(m,p,b,h)=>fetch(CFG.url+p,{method:m,headers:{apikey:CFG.key,...((TOK||!/^sb_/.test(CFG.key))?{Authorization:'Bearer '+(TOK||CFG.key)}:{}),'Content-Type':'application/json',...(h||{})},body:b==null?undefined:JSON.stringify(b)}).then(r=>r.text().then(t=>{let j=null;try{j=JSON.parse(t)}catch(e){}return{ok:r.ok,s:r.status,j}})).catch(()=>({ok:false,s:0,j:null}));
 const sel=(t,q)=>api('GET','/rest/v1/'+t+(q?'?'+q:'')).then(r=>r.ok&&Array.isArray(r.j)?r.j:[]);
 const MIN={Prefer:'return=minimal'};
 const log=(a,d)=>api('POST','/rest/v1/audit_logs',{actor:EM,role:ROLE,action:a,details:String(d||'').slice(0,500)},MIN);
@@ -118,7 +118,8 @@ async function show(k){document.querySelectorAll('#tb button').forEach(x=>x.clas
 async function start(){const r=await api('POST','/rest/v1/rpc/staff_role',{});ROLE=typeof r.j==='string'?r.j:'';if(!ROLE){say('Ce compte n\'est pas autorisé (ni admin, ni chef).');return}
  const rows=await sel('site_content','select=id,data');rows.forEach(x=>{if(x.id==='chef')CH=x.data||{};if(x.id==='admin')AD=x.data||{};if(x.id==='meta')MT=x.data||MT});
  $('lo').hidden=true;$('app').hidden=false;$('who').textContent=EM+' · '+(ROLE==='admin'?'Administrateur (supervision)':'Chef');$('tb').innerHTML='';TABS[ROLE].forEach(k=>{const b=bt(T[k][0],'s',()=>show(k));b.dataset.k=k;$('tb').appendChild(b)});show(TABS[ROLE][0])}
-$('lo').onsubmit=async e=>{e.preventDefault();say('Connexion…');const r=await api('POST','/auth/v1/token?grant_type=password',{email:$('em').value,password:$('pw').value});if(!r.ok||!r.j||!r.j.access_token){say('Email ou mot de passe incorrect.');return}TOK=r.j.access_token;EM=(r.j.user&&r.j.user.email)||$('em').value;$('pw').value='';start()};
+const why=r=>{const j=r.j||{},c=j.error_code||j.code||'',m=String(j.msg||j.error_description||j.message||'').toLowerCase();if(r.s===0)return'Connexion impossible : vérifiez l\'URL dans config.js et votre réseau.';if(c==='email_not_confirmed'||m.includes('not confirmed'))return'Email non confirmé : dans Supabase, Authentication > Users, confirmez ce compte.';if(c==='invalid_credentials'||m.includes('invalid login'))return'Email ou mot de passe incorrect, ou ce compte n\'existe pas dans Supabase (Authentication > Users).';if(r.s===401||r.s===403||m.includes('api key')||m.includes('jwt'))return'Clé refusée par Supabase : vérifiez la clé dans config.js ('+r.s+').';return'Connexion refusée ('+r.s+') : '+(m||c||'erreur inconnue')};
+$('lo').onsubmit=async e=>{e.preventDefault();say('Connexion…');const r=await api('POST','/auth/v1/token?grant_type=password',{email:$('em').value,password:$('pw').value});if(!r.ok||!r.j||!r.j.access_token){say(why(r));return}TOK=r.j.access_token;EM=(r.j.user&&r.j.user.email)||$('em').value;$('pw').value='';start()};
 $('out').onclick=()=>location.reload();
 if(CFG.url){say('Connectez-vous avec le compte chef ou admin.');$('lo').hidden=false}else say('⚠ Ouvrez config.js, collez l\'URL et la clé anon de Supabase entre les guillemets, puis redéployez.');
 </script></body></html>
